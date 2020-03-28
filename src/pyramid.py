@@ -3,14 +3,17 @@ import sys
 from mcpi import block
 from mcpi.minecraft import Minecraft
 
+# El objetivo de este tutorial es construir pirámides en Minecraft
+
+
 MC_SEVER_HOST = "javierete.com"
 MC_SEVER_PORT = 8711
 PYRAMID_HEIGHT = 10
-PYRAMID_BLOCK = block.SAND
+PYRAMID_BLOCK = block.SANDSTONE
 
 # Nos conectamos al servidor de Minecraft
 mc = Minecraft.create(address=MC_SEVER_HOST, port=MC_SEVER_PORT)
-mc.postToChat("Building a Pyramid of " + str(PYRAMID_HEIGHT) + " height!")
+mc.postToChat("¡Construyendo una pirámide de " + str(PYRAMID_HEIGHT) + " de altura!")
 
 # Buscamos la posición en el mundo de nuestro jugador
 p = mc.player.getTilePos()
