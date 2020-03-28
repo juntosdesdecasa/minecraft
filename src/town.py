@@ -10,9 +10,9 @@ from mcpi.minecraft import Minecraft
 MC_SEVER_HOST = "javierete.com"
 MC_SEVER_PORT = 8711
 # Tiene que ser mayor que 3
-HOUSE_HEIGHT = 3
+HOUSE_HEIGHT = 4
 # Tiene que ser mayor que 4
-HOUSE_WIDTH = 4
+HOUSE_WIDTH = 10
 
 HOUSE_BLOCK = block.WOOD
 HOUSES_NUMBER = 25
