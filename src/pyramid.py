@@ -5,6 +5,7 @@ from mcpi.minecraft import Minecraft
 
 # El objetivo de este tutorial es construir pirámides en Minecraft
 
+BUILDER_NAME = "ElasticExplorer"
 
 MC_SEVER_HOST = "javierete.com"
 MC_SEVER_PORT = 8711
@@ -16,9 +17,14 @@ mc = Minecraft.create(address=MC_SEVER_HOST, port=MC_SEVER_PORT)
 mc.postToChat("¡Construyendo una pirámide de " + str(PYRAMID_HEIGHT) + " de altura!")
 
 # Buscamos la posición en el mundo de nuestro jugador
-p = mc.player.getTilePos()
+# Esto sólo vale en singleplayer
+# p = mc.player.getTilePos()
+p = mc.entity.getTilePos(mc.getPlayerEntityId(BUILDER_NAME))
 
 # La pirámide la hacemos delante del jugador
+
+BUILDER_NAME = "ElasticExplorer"
+
 init_x = p.x + 1
 init_y = p.y
 init_z = p.z

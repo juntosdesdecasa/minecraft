@@ -7,10 +7,11 @@ from mcpi.minecraft import Minecraft
 # El objetivo de este tutorial es aprender a trabajar
 # con cubos en Minecraft con el objetivo de hacer casas
 
+BUILDER_NAME = "ElasticExplorer"
 
 MC_SEVER_HOST = "javierete.com"
 MC_SEVER_PORT = 8711
-CUBE_HEIGHT = 20
+CUBE_HEIGHT = 3
 CUBE_BLOCK = block.BRICK_BLOCK
 
 # Nos conectamos al servidor de Minecraft
@@ -18,7 +19,10 @@ mc = Minecraft.create(address=MC_SEVER_HOST, port=MC_SEVER_PORT)
 mc.postToChat("Construyendo cubos")
 
 # Buscamos la posición en el mundo de nuestro jugador
-p = mc.player.getTilePos()
+# Esto sólo vale en singleplayer
+# p = mc.player.getTilePos()
+
+p = mc.entity.getTilePos(mc.getPlayerEntityId(BUILDER_NAME))
 
 # El cubo lo hacemos delante del jugador
 init_x = p.x + 1

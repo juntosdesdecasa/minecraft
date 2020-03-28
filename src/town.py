@@ -6,6 +6,7 @@ from mcpi.minecraft import Minecraft
 
 # El objetivo de este tutorial es aprender a constuir una aldea con casas
 
+BUILDER_NAME = "ElasticExplorer"
 
 MC_SEVER_HOST = "javierete.com"
 MC_SEVER_PORT = 8711
@@ -27,7 +28,10 @@ mc = Minecraft.create(address=MC_SEVER_HOST, port=MC_SEVER_PORT)
 mc.postToChat("Construyendo un pueblo")
 
 # Buscamos la posición en el mundo de nuestro jugador
-p = mc.player.getTilePos()
+# Esto sólo vale en singleplayer
+# p = mc.player.getTilePos()
+p = mc.entity.getTilePos(mc.getPlayerEntityId(BUILDER_NAME))
+
 mc.postToChat("Origen de construcción " + str(p))
 
 # Hacemos la aldea delante del jugador
