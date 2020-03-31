@@ -11,14 +11,14 @@ BUILDER_NAME = "ElasticExplorer"
 MC_SEVER_HOST = "javierete.com"
 MC_SEVER_PORT = 8711
 # Tiene que ser mayor que 3
-HOUSE_HEIGHT = 3
+HOUSE_HEIGHT = 30
 # Tiene que ser mayor que 4
-HOUSE_WIDTH = 10
+HOUSE_WIDTH = 50
 # Espacio entre las casas
-HOUSE_SPACE = 3
+HOUSE_SPACE = 10
 
-HOUSE_BLOCK = block.WOOD
-HOUSES_NUMBER = 10
+HOUSE_BLOCK = block.BRICK_BLOCK
+HOUSES_NUMBER = 2
 
 WALL_BLOCK = block.STONE
 WALL_HEIGHT = HOUSE_HEIGHT + 2
