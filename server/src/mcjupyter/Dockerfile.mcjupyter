@@ -1,0 +1,14 @@
+# mcjupyter
+# 
+FROM jupyter/minimal-notebook:latest
+
+USER root
+
+RUN apt-get update && \
+    apt-get install -y python3-pip 
+
+ADD jupyter_notebook_config.py /home/jovyan/.jupyter/
+RUN chmod 664 /home/jovyan/.jupyter/jupyter_notebook_config.py && \
+    chown jovyan:users /home/jovyan/.jupyter/jupyter_notebook_config.py && \
+    python3.7 -m pip install mcpi
+USER jovyan

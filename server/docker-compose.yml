@@ -1,0 +1,23 @@
+version: '2.0'
+services:
+  minecraft:
+    build:
+      context: "${MINECRAFTSRV_PATH}/src/spigotngrok"
+      dockerfile: Dockerfile.spigotngrok
+    ports:
+    - "25565:25565"
+    - "4771:4771"
+    volumes:
+    - ${MINECRAFTSRV_PATH}/etc:/opt/minecraft/config
+    - ${MINECRAFTSRV_PATH}/plugins:/opt/minecraft/plugins
+    - ${MINECRAFTSRV_PATH}/data/spigot/worlds:/opt/minecraft/worlds
+    - ${MINECRAFTSRV_PATH}/data/spigot/data:/opt/minecraft/data
+    - ${MINECRAFTSRV_PATH}/log:/opt/minecraft/logs
+  mcjupyter:
+    build:
+      context: "${MINECRAFTSRV_PATH}/src/mcjupyter"
+      dockerfile: Dockerfile.mcjupyter
+    ports:
+    - "8888:8888"
+    volumes:
+    - ${MINECRAFTSRV_PATH}/data/python:/home/jovyan/work
