@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile.spigotngrok
     ports:
     - "25565:25565"
-    - "4771:4771"
+    - "4711:4711"
     volumes:
     - ${MINECRAFTSRV_PATH}/etc:/opt/minecraft/config
     - ${MINECRAFTSRV_PATH}/plugins:/opt/minecraft/plugins
