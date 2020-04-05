@@ -54,7 +54,7 @@ Asegúrate que tu máquina tiene una versión reciente de [Docker](https://www.d
 
 Si consigues llevar a cabo estos pasos de manera satisfactoria, ya tendrás tu servidor de Minecraft vitaminado y programable con Python en tu entorno local:
 
-* El servidor de Minecraft está mapeado al **puerto TCP 25565** de la máquina donde se haya creado el contenedor, y el **puerto TCP 4771** para interaccionar con el servidor con Python.
+* El servidor de Minecraft está mapeado al **puerto TCP 25565** de la máquina donde se haya creado el contenedor, y el **puerto TCP 4711** para interaccionar con el servidor con Python.
 * La herramienta Jupyter para facilitar la tarea de escritura de código Python está disponible en el **puerto TCP 8888** de la máquina donde se creó el contenedor. Jupyter es una herramienta web, por lo que podrás acceder a ella mediante tu navegador favorito especificando la URL correspondiente (ej. http://localhost:8888 si están en la misma máquina donde se creó el contenedor). La **contraseña para acceder** a esta herramienta es **hola123**.
 
 ## Juega con otros jugadores aunque no estén en tu red local
