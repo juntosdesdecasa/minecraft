@@ -29,7 +29,7 @@ Asegúrate que tu máquina tiene una versión reciente de [Docker](https://www.d
    ```
 
 ### Arranca tu servidor de Minecraft dockerizado y vitaminado
-Para arrancar tu servidor tienes que pasar el parámetro `start` al script de administración del servidor. La primera vez que lo hagas, el proceso tardará un poco más de lo habitual por que tiene que construir las imágenes, después todo será mucho más rápido:
+Para arrancar tu servidor tienes que pasar el parámetro `start` al script de administración del servidor. La primera vez que lo hagas, el proceso tardará un poco más de lo habitual porque tiene que construir las imágenes, después todo será mucho más rápido:
    ```
    $ bin/server-linux.sh start
    Comprobando variable de entorno MINECRAFTSRV_PATH...
