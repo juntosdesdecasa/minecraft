@@ -1,7 +1,7 @@
 #!/bin/bash
 
-MINECRAFTSRV_PATH=/home/rmarin/Documents/repos/minecraft/server
-NGROK_AUTHTOKEN=1VeVCFYFgnwSeaie1zYW5RqrfK6_6EAF8L2svnoBiTgrLURpM
+#MINECRAFTSRV_PATH=
+#NGROK_AUTHTOKEN=
 
 check_env() {
     # 1. Se comprueba existencia de la variable de entorno MINECRAFTSRV_PATH
