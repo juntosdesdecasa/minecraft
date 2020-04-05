@@ -20,6 +20,7 @@ Asegúrate que tu máquina tiene una versión reciente de [Docker](https://www.d
    #!/bin/bash
    
    MINECRAFTSRV_PATH=/home/rmarin/Documents/repos/minecraft/server
+   ...
    ```
 3. Utiliza el script de administración del servidor `server-linux.sh` para arrancar y parar tu servidor a voluntad:
    ```
@@ -80,13 +81,14 @@ Una vez que hayáis terminado de jugar, es recomendable que finalices tu servido
 ### Juega con otros jugadores aunque no estén en tu red local
 Como comentaba antes, la imagen que tiene el servidor de Minecraft vitaminado tiene un binario asociado al servicio [ngrok](https://ngrok.com/) que se encarga de crear túneles de comunicaciones que permitan a usuarios de Internet conectarse a equipos que están en redes privadas, como la que probablemente tengas en tu casa. Para crear este túnel y conectarlo con tu servidor de Minecraft vitaminado, tendrás que seguir estos pasos:
 
-1. Créate una cuenta gratuita en ngrok para obtener tu token de autenticación. Los pasos para configurar el tunel se especifican en la URL [https://dashboard.ngrok.com/get-started](https://dashboard.ngrok.com/get-started) una vez que has creado tu usuario.
+1. Créate una cuenta gratuita en [ngrok](https://ngrok.com/) para obtener tu token de autenticación. Los pasos para configurar el tunel se especifican en la URL [https://dashboard.ngrok.com/get-started](https://dashboard.ngrok.com/get-started) una vez que has creado tu usuario.
 2. Una vez identificado tu token, deberás editar de nuevo el script de administración del servidor para guardar el token y que se utilice cuando sea necesario:
    ```
    #!/bin/bash
 
    MINECRAFTSRV_PATH=/home/rmarin/Documents/repos/minecraft/server
    NGROK_AUTHTOKEN=1VeVCFYFgnwSeaie1zYW5RqrfK6_6EAF8L2svnoBiTgrLURpM
+   ...
    ```
    **NOTA:** El token del ejemplo no es válido y lo tendrás que reemplazar por el tuyo.
 3. Ya podemos utilizar el script de administración del servidor para configurar nuestra cuenta de ngrok. El parámetro `ngrok-setup` hará las configuraciones oportunas e iniciará el tunel:
