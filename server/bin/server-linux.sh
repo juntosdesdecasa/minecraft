@@ -33,7 +33,7 @@ check_ngrok() {
 }
 
 check_prereq() {
-    folders="etc log data/spigot/worlds data/spigot/data"
+    folders="etc log data/python data/spigot/worlds data/spigot/data"
 
     # 1. Se comprueba existencia de la variable de entorno
     check_env
