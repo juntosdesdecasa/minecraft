@@ -9,7 +9,7 @@ Toda la funcionalidad está encapsulada en dos imágenes Docker:
 
 ## [Linux] Instrucciones para hacerlo funcionar en tu red local si usas Linux para tu servidor
 Asegúrate que tu máquina tiene una versión reciente de [Docker](https://www.docker.com/), además de la herramienta `docker-compose`. Con estos prerrequisitos satisfechos, lleva a cabo los siguientes pasos:
-1. Descarga el contenido de este directorio o haz un clonado del repositorio, entra dentro del directorio server e identifica la ruta absoluta donde te encuentras:
+1. Descarga el contenido de este directorio o haz un clonado del repositorio, entra dentro del directorio `server` e identifica la ruta absoluta donde te encuentras:
    ```
    $ cd server
    $ pwd
