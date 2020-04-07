@@ -10,7 +10,7 @@ Hasta el momento los talleres que se han impartido son:
 
 * [Taller 1: Las pirámides de Egipto](https://www.juntosdesdecasa.com/index.php/project/minecraft-y-python/) (
 [Video 1](https://youtu.be/wy5cJ5-rEpw) y [Video 2](https://www.youtube.com/watch?v=oX9uEeps_So))
-* [Taller 2: La gran muralla China](https://www.juntosdesdecasa.com/index.php/project/tus-primeros-pasos-en-minecraft-usando-la-magia-de-python/)
+* [Taller 2: La gran muralla China](https://www.juntosdesdecasa.com/index.php/project/tus-primeros-pasos-en-minecraft-usando-la-magia-de-python/) ([Video](https://www.youtube.com/watch?v=RMp08BWR50k))
 
 Todos los ejemplos de los talleres los tenéis en [este enlace](src) y es todo **software libre**: los puedes leer, ejecutar, modificar y compartir sin límites.
 
