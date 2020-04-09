@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#MINECRAFTSRV_PATH=
+MINECRAFTSRV_PATH=.
 #NGROK_AUTHTOKEN=
 
 check_env() {
