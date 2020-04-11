@@ -1,32 +1,32 @@
 import sys
 
-from mcpi import block
-from mcpi.minecraft import Minecraft
+import mcpi.block
+import mcpi.minecraft
 
-import mcpython.block
 
-# El objetivo de este tutorial es aprender a trabajar
-# con la pieza mínima: un bloque
+from mcpython.block import Block
 
-# Nombre del jugador que va a construir las cosas
 BUILDER_NAME = "ElasticExplorer"
 
-# Datos del servidor de Minecraft
 MC_SEVER_HOST = "localhost"
 MC_SEVER_PORT = 4711
 
-# Nos conectamos al servidor de Minecraft
-mc = Minecraft.create(address=MC_SEVER_HOST, port=MC_SEVER_PORT)
-mc.postToChat("Construyendo cubos")
 
-# Buscamos la posición en el mundo de nuestro jugador
-# Esto sólo vale en singleplayer
-# p = mc.player.getTilePos()
+def main():
+    try:
+        mc = mcpi.minecraft.Minecraft.create(address=MC_SEVER_HOST, port=MC_SEVER_PORT)
 
-pos = mc.entity.getTilePos(mc.getPlayerEntityId(BUILDER_NAME))
+        mc.postToChat("Construyendo cubos")
+        pos = mc.entity.getTilePos(mc.getPlayerEntityId(BUILDER_NAME))
+        pos.x += 1
 
-block = mcpython.block.Block(block.BRICK_BLOCK, pos, mc)
+        block = Block(mcpi.block.BRICK_BLOCK, pos, mc)
+        block.build()
 
-block.build()
+    except mcpi.connection.RequestError:
+        print("Can't connect to Minecraft server " + MC_SEVER_HOST)
 
-sys.exit(0)
+
+if __name__ == "__main__":
+    main()
+    sys.exit(0)

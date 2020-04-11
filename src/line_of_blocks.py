@@ -1,63 +1,66 @@
 import sys
 
-from mcpi import block
-from mcpi.minecraft import Minecraft
+import mcpi.block
+import mcpi.minecraft
 
 
-# El objetivo de este tutorial es aprender a trabajar
-# con la pieza mínima: un bloque
+from mcpython.block import Block
 
-# Nombre del jugador que va a construir las cosas
 BUILDER_NAME = "ElasticExplorer"
 
-# Datos del servidor de Minecraft
-MC_SEVER_HOST = "javierete.com"
-MC_SEVER_PORT = 8711
-
-# Nos conectamos al servidor de Minecraft
-mc = Minecraft.create(address=MC_SEVER_HOST, port=MC_SEVER_PORT)
-mc.postToChat("Construyendo cubos")
-
-# Buscamos la posición en el mundo de nuestro jugador
-# Esto sólo vale en singleplayer
-# p = mc.player.getTilePos()
-
-p = mc.entity.getTilePos(mc.getPlayerEntityId(BUILDER_NAME))
-
-# Coordenadas del jugador en las que se crea el bloque
-# Nos separamos de donde estamos para no quedarnos dentro
-init_x = p.x + 1
-init_y = p.y
-init_z = p.z
-
-block_type = block.BRICK_BLOCK
-# block_type = block.AIR
-blocks_number = 5
-
-# Creamos una línea en x crecientes
-for x in range(1, blocks_number):
-    mc.setBlock(init_x+x, init_y, init_z, block_type)
-
-# Creamos una línea en x decrecientes
-for x in range(1, blocks_number):
-    mc.setBlock(init_x-x, init_y, init_z, block_type)
-
-# Creamos una línea en y crecientes
-for y in range(1, blocks_number):
-    mc.setBlock(init_x, init_y + y, init_z, block_type)
-
-# Creamos una línea en y decrecientes
-for y in range(1, blocks_number):
-    mc.setBlock(init_x, init_y - y, init_z, block_type)
-
-# Creamos una línea en z crecientes
-for z in range(1, blocks_number):
-    mc.setBlock(init_x, init_y, init_z + z, block_type)
-
-# Creamos una línea en z decrecientes
-for z in range(1, blocks_number):
-    mc.setBlock(init_x, init_y, init_z - z, block_type)
+MC_SEVER_HOST = "localhost"
+MC_SEVER_PORT = 4711
 
 
-# Salimos del programa
-sys.exit(0)
+def main():
+    blocks_number = 5
+
+    try:
+        mc = mcpi.minecraft.Minecraft.create(address=MC_SEVER_HOST, port=MC_SEVER_PORT)
+
+        mc.postToChat("Construyendo lineas rectas en los tres ejes")
+        pos = mc.entity.getTilePos(mc.getPlayerEntityId(BUILDER_NAME))
+
+        # Creamos una línea en x crecientes
+        block_pos = mcpi.vec3.Vec3(pos.x+1, pos.y, pos.z)
+        for x in range(0, blocks_number):
+            block_pos.x += 1
+            Block(mcpi.block.BRICK_BLOCK, block_pos, mc).build()
+
+        # Creamos una línea en x decrecientes
+        block_pos = mcpi.vec3.Vec3(pos.x+1, pos.y, pos.z)
+        for x in range(1, blocks_number):
+            block_pos.x -= 1
+            Block(mcpi.block.BRICK_BLOCK, block_pos, mc).build()
+
+        # Creamos una línea en y crecientes
+        block_pos = mcpi.vec3.Vec3(pos.x+1, pos.y, pos.z)
+        for y in range(1, blocks_number):
+            block_pos.y += 1
+            Block(mcpi.block.BRICK_BLOCK, block_pos, mc).build()
+
+        # Creamos una línea en y decrecientes
+        block_pos = mcpi.vec3.Vec3(pos.x+1, pos.y, pos.z)
+        for y in range(1, blocks_number):
+            block_pos.y -= 1
+            Block(mcpi.block.BRICK_BLOCK, block_pos, mc).build()
+
+        # Creamos una línea en z crecientes
+        block_pos = mcpi.vec3.Vec3(pos.x+1, pos.y, pos.z)
+        for z in range(1, blocks_number):
+            block_pos.z += 1
+            Block(mcpi.block.BRICK_BLOCK, block_pos, mc).build()
+
+        # Creamos una línea en z decrecientes
+        block_pos = mcpi.vec3.Vec3(pos.x+1, pos.y, pos.z)
+        for z in range(1, blocks_number):
+            block_pos.z -= 1
+            Block(mcpi.block.BRICK_BLOCK, block_pos, mc).build()
+
+    except mcpi.connection.RequestError:
+        print("Can't connect to Minecraft server " + MC_SEVER_HOST)
+
+
+if __name__ == "__main__":
+    main()
+    sys.exit(0)

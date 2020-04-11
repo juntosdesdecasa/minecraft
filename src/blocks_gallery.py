@@ -1,44 +1,30 @@
 import sys
 
-from mcpi import block
-from mcpi.minecraft import Minecraft
+import mcpi.block
+import mcpi.minecraft
 
+from mcpython.blocks_gallery import BlocksGallery
 
-# Mostramos toda la galería de bloques disponible
-# No todos se reflejan en mcpi.block
-
-# Nombre del jugador que va a construir las cosas
 BUILDER_NAME = "ElasticExplorer"
 
-# Datos del servidor de Minecraft
-MC_SEVER_HOST = "javierete.com"
-MC_SEVER_PORT = 8711
-
-# Nos conectamos al servidor de Minecraft
-mc = Minecraft.create(address=MC_SEVER_HOST, port=MC_SEVER_PORT)
-mc.postToChat("Construyendo cubos")
-
-# Buscamos la posición en el mundo de nuestro jugador
-# Esto sólo vale en singleplayer
-# p = mc.player.getTilePos()
-
-p = mc.entity.getTilePos(mc.getPlayerEntityId(BUILDER_NAME))
-
-# Coordenadas del jugador en las que se crea el bloque
-# Nos separamos de donde estamos para no quedarnos dentro
-init_x = p.x + 1
-init_y = p.y
-init_z = p.z
+MC_SEVER_HOST = "localhost"
+MC_SEVER_PORT = 4711
 
 
-# Probamos a poner todos los tipos de bloques en línea
-MAX_BLOCK_NUMBER = 247
+def main():
+    try:
+        mc = mcpi.minecraft.Minecraft.create(address=MC_SEVER_HOST, port=MC_SEVER_PORT)
 
-for i in range(1, MAX_BLOCK_NUMBER):
-    mc.setBlock(init_x, init_y, init_z + i, block.Block(i))
+        mc.postToChat("Construyendo todos los bloques posibles")
+        pos = mc.entity.getTilePos(mc.getPlayerEntityId(BUILDER_NAME))
 
-REDSTONE = block.Block(55)  # Not included officially
-SIGN = block.Block(63)
+        blocks = BlocksGallery(mcpi.block.BRICK_BLOCK, pos, mc)
+        blocks.build()
 
-# Salimos del programa
-sys.exit(0)
+    except mcpi.connection.RequestError:
+        print("Can't connect to Minecraft server " + MC_SEVER_HOST)
+
+
+if __name__ == "__main__":
+    main()
+    sys.exit(0)

@@ -3,7 +3,7 @@ import sys
 import mcpi.block
 import mcpi.minecraft
 
-from mcpython.building import Building
+from mcpython.house import House
 
 BUILDER_NAME = "ElasticExplorer"
 
@@ -15,11 +15,12 @@ def main():
     try:
         mc = mcpi.minecraft.Minecraft.create(address=MC_SEVER_HOST, port=MC_SEVER_PORT)
 
-        mc.postToChat("Construyendo un edificio")
+        mc.postToChat("Construyendo una casa")
         pos = mc.entity.getTilePos(mc.getPlayerEntityId(BUILDER_NAME))
+        pos.x += 1
 
-        building = Building(mcpi.block.BRICK_BLOCK, pos, mc)
-        building.build()
+        house = House(mcpi.block.BRICK_BLOCK, pos, mc)
+        house.build()
 
     except mcpi.connection.RequestError:
         print("Can't connect to Minecraft server " + MC_SEVER_HOST)
