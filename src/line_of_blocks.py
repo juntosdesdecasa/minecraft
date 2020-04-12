@@ -4,7 +4,7 @@ import mcpi.block
 import mcpi.minecraft
 
 
-from mcpython.block import Block
+from mcthings.block import Block
 
 BUILDER_NAME = "ElasticExplorer"
 

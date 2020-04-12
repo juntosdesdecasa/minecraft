@@ -3,7 +3,7 @@ import sys
 import mcpi.block
 import mcpi.minecraft
 
-from mcpython.blocks_gallery import BlocksGallery
+from mcthings.blocks_gallery import BlocksGallery
 
 BUILDER_NAME = "ElasticExplorer"
 

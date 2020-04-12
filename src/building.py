@@ -3,7 +3,7 @@ import sys
 import mcpi.block
 import mcpi.minecraft
 
-from mcpython.building import Building
+from mcthings.building import Building
 
 BUILDER_NAME = "ElasticExplorer"
 

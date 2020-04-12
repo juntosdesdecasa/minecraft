@@ -4,7 +4,7 @@ import mcpi.block
 import mcpi.minecraft
 
 
-from mcpython.pyramid import Pyramid
+from mcthings.pyramid import Pyramid
 
 BUILDER_NAME = "ElasticExplorer"
 

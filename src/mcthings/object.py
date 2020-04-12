@@ -2,7 +2,7 @@ import mcpi
 
 
 class Object:
-    """ Base class for all objects in mcpython library """
+    """ Base class for all objects in mcthings library """
 
     block = None
     block_empty = mcpi.block.AIR

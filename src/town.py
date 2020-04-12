@@ -4,7 +4,7 @@ import mcpi.block
 import mcpi.minecraft
 
 
-from mcpython.town import Town
+from mcthings.town import Town
 
 BUILDER_NAME = "ElasticExplorer"
 
