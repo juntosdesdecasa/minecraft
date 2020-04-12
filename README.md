@@ -15,7 +15,7 @@ Hasta el momento los talleres que se han impartido son:
 A parte de aquí en GitHub, nos comunicamos usando:
 
 * Canal de Telegram:  https://t.me/python4minecraft 
-* Discord: https://discord.gg/GQkKfe
+* [Discord](https://discordapp.com/channels/688805278220943399/688805278824530019)
 
 Todos los ejemplos de los talleres los tenéis en [este enlace](src) y es todo **software libre**: los puedes leer, ejecutar, modificar y compartir sin límites. También los iremos conviertiendo a [notebooks aquí](server/data/python). Y tenemos [un vídeo de cómo crear los notebooks](https://www.youtube.com/watch?v=MFL66ParQuk).
 
