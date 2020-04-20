@@ -11,6 +11,8 @@ Hasta el momento los talleres que se han impartido son:
 * [Taller 1: Las pirámides de Egipto](https://www.juntosdesdecasa.com/index.php/project/minecraft-y-python/) (
 [Video 1](https://youtu.be/wy5cJ5-rEpw) y [Video 2](https://www.youtube.com/watch?v=oX9uEeps_So))
 * [Taller 2: La gran muralla China](https://www.juntosdesdecasa.com/index.php/project/tus-primeros-pasos-en-minecraft-usando-la-magia-de-python/) ([Video](https://www.youtube.com/watch?v=RMp08BWR50k))
+* [Taller 3: Programando con Jupyter](https://www.juntosdesdecasa.com/index.php/project/taller-4-de-minecraft-aprender-a-programar-python-con-jupyter-para-ninos-a-traves-del-minecraft/) ([Video](https://www.youtube.com/watch?v=r9jryiLrJ98))
+
 
 A parte de aquí en GitHub, nos comunicamos usando:
 
