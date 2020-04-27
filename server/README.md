@@ -7,7 +7,7 @@ Toda la funcionalidad está encapsulada en dos imágenes Docker:
 1. **spigotngrok.-** contiene el servidor Spigot, con el plugin `raspberryjuice-1.11.jar` y el servicio [ngrok](https://ngrok.com/) instalado para crear un tunel TCP para que los usuarios se puedan conectar desde cualquier parte de Internet.
 2. **mcjupyter.-** contiene [Jupyter](https://jupyter.org/) y la biblioteca Python [mcpi](https://github.com/martinohanlon/mcpi) para interaccionar con nuestro servidor de Minecraft.
 
-## [Linux] Instrucciones para hacerlo funcionar en tu red local si usas Linux para tu servidor
+## [Linux/Mac] Instrucciones para hacerlo funcionar en tu red local si usas Linux o Mac OS X para tu servidor
 Asegúrate que tu máquina tiene una versión reciente de [Docker](https://www.docker.com/), además de la herramienta `docker-compose`. Con estos prerrequisitos satisfechos, lleva a cabo los siguientes pasos:
 1. Descarga el contenido de este directorio o haz un clonado del repositorio, entra dentro del directorio `server` e identifica la ruta absoluta donde te encuentras:
    ```
