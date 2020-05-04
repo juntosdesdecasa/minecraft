@@ -15,6 +15,7 @@ Hasta el momento los talleres que se han impartido son:
 * [La gran muralla China con Jupyter](https://www.juntosdesdecasa.com/index.php/project/taller-5-de-minecraft/) ([Video](https://www.youtube.com/watch?v=drBpkKXo15E))
 * [Grandes edificios](https://www.juntosdesdecasa.com/index.php/project/taller-6-de-minecraft/) ([Video](https://www.youtube.com/watch?v=35PqoDFJZKU
 ))
+* [Aldeas amuralladas](https://www.juntosdesdecasa.com/index.php/project/taller-7-de-minecraft/) ([Video](https://www.youtube.com/watch?v=8pMxZIATKQY))
 
 
 A parte de aquí en GitHub, nos comunicamos usando:
