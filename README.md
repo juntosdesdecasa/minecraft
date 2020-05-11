@@ -16,6 +16,8 @@ Hasta el momento los talleres que se han impartido son:
 * [Grandes edificios](https://www.juntosdesdecasa.com/index.php/project/taller-6-de-minecraft/) ([Video](https://www.youtube.com/watch?v=35PqoDFJZKU
 ))
 * [Aldeas amuralladas](https://www.juntosdesdecasa.com/index.php/project/taller-7-de-minecraft/) ([Video](https://www.youtube.com/watch?v=8pMxZIATKQY))
+* [McThings](https://www.juntosdesdecasa.com/index.php/project/taller-8-de-minecraft/) ([Video](https://www.youtube.com/watch?v=zBSjLjot-s0))
+
 
 
 A parte de aquí en GitHub, nos comunicamos usando:
