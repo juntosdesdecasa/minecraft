@@ -17,6 +17,8 @@ Hasta el momento los talleres que se han impartido son:
 ))
 * [Aldeas amuralladas](https://www.juntosdesdecasa.com/index.php/project/taller-7-de-minecraft/) ([Video](https://www.youtube.com/watch?v=8pMxZIATKQY))
 * [McThings](https://www.juntosdesdecasa.com/index.php/project/taller-8-de-minecraft/) ([Video](https://www.youtube.com/watch?v=zBSjLjot-s0))
+* [McThings II](https://www.juntosdesdecasa.com/index.php/project/taller-9-de-minecraft/) ([Video](https://www.youtube.com/watch?v=hvNwA2ch4VM&t=4s)): "El apoteósico final"
+ 
 
 
 
